@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Cadastro da Conecta Estágio com fluxo mais direto para aluno e recrutador, com publicação de vaga dentro da área do recrutador."
+  />
+  <title>Conecta Estágio | Cadastro de aluno e recrutador</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Conecta <strong>Estágio</strong></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="dashboard.html">Perfil</a>
+        <a href="dashboard-recrutador.html">Recrutador</a>
+        <a href="comunidade.html">Comunidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section auth-scene">
+    <div class="container auth-layout">
+      <section class="surface-card auth-visual reveal">
+        <span class="eyebrow">Entradas separadas e bem mais claras</span>
+        <h1>O aluno entra com o essencial. O recrutador assume a área da empresa e publica vaga por lá.</h1>
+        <p>
+          A ideia aqui não é cansar quem está chegando. O aluno preenche só o básico para começar,
+          enquanto o recrutador entra por outro fluxo e depois segue para uma área própria com vagas e perfis.
+        </p>
+
+        <div class="visual-grid">
+          <article class="visual-metric">
+            <strong>Aluno</strong>
+            <span>Nome, email, telefone e curso. Sem excesso logo no primeiro passo.</span>
+          </article>
+          <article class="visual-metric">
+            <strong>Área do recrutador</strong>
+            <span>Vagas, links externos e leitura de perfis em uma área separada da jornada do aluno.</span>
+          </article>
+        </div>
+
+        <ul class="check-list">
+          <li>Cadastro do aluno mais curto e sem pedir informação demais cedo demais.</li>
+          <li>A publicação de vaga acontece dentro da área do recrutador, não no cadastro.</li>
+          <li>O foco da plataforma fica bem definido em áreas de tecnologia.</li>
+        </ul>
+
+        <div class="visual-photo">
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+            alt="Universitarios conversando em um campus"
+          />
+        </div>
+      </section>
+
+      <section class="surface-card auth-card reveal">
+        <div class="auth-tabs" role="tablist" aria-label="Tipos de cadastro">
+          <button type="button" class="tab-button active" data-auth-tab="student" aria-selected="true">
+            Cadastro de aluno
+          </button>
+          <button type="button" class="tab-button" data-auth-tab="recruiter" aria-selected="false">
+            Cadastro de recrutador
+          </button>
+        </div>
+
+        <div class="tab-caption">
+          <p>Cada aba mostra um fluxo separado para o projeto ficar mais direto e mais crível.</p>
+        </div>
+
+        <div class="auth-panel active" data-auth-panel="student">
+          <div class="panel-header">
+            <h2>Cadastro de aluno</h2>
+            <p>Só o básico para você entrar rápido e depois decidir o que vale completar.</p>
+          </div>
+
+          <form
+            class="form-grid js-demo-submit"
+            data-success-message="Conta criada. Agora já dá para entrar nas vagas e filtrar pela área que mais combina com você."
+          >
+            <div class="field">
+              <label for="student-name">Nome</label>
+              <input type="text" id="student-name" placeholder="Seu nome" required />
+            </div>
+
+            <div class="field">
+              <label for="student-email">Email</label>
+              <input type="email" id="student-email" placeholder="voce@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="student-phone">Telefone</label>
+              <input type="tel" id="student-phone" placeholder="(11) 99999-9999" required />
+            </div>
+
+            <div class="field">
+              <label for="student-course">Curso</label>
+              <select id="student-course" required>
+                <option value="">Selecione</option>
+                <option>Análise e Desenvolvimento de Sistemas</option>
+                <option>Sistemas de Informação</option>
+                <option>Ciência da Computação</option>
+                <option>Engenharia de Software</option>
+                <option>Banco de Dados</option>
+                <option>Redes de Computadores</option>
+                <option>Design Digital</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Criar conta de aluno</button>
+              <a href="vagas.html" class="button button-secondary">Ver vagas tech</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="auth-panel" data-auth-panel="recruiter" hidden>
+          <div class="panel-header">
+            <h2>Cadastro de recrutador</h2>
+            <p>Um fluxo mais direto para quem precisa abrir vaga e acompanhar candidatos.</p>
+          </div>
+
+          <article class="community-callout recruiter-callout">
+            <div class="post-meta-line">
+              <strong>Comunidade aberta para recrutadores</strong>
+              <span class="role-tag recruiter-tag">Recrutador</span>
+            </div>
+            <p>
+              Depois do cadastro, você também pode entrar na comunidade para compartilhar ideias, dicas e conselhos
+              sobre portfólio, entrevistas, currículo e como se preparar melhor para conseguir vaga no mundo tech.
+            </p>
+          </article>
+
+          <form
+            class="form-grid js-demo-submit"
+            data-success-message="Conta criada. Agora você já pode entrar na área do recrutador, publicar vagas e acessar perfis."
+          >
+            <div class="field">
+              <label for="recruiter-name">Nome do responsável</label>
+              <input type="text" id="recruiter-name" placeholder="Seu nome" required />
+            </div>
+
+            <div class="field">
+              <label for="recruiter-email">Email corporativo</label>
+              <input type="email" id="recruiter-email" placeholder="talentos@empresa.com" required />
+            </div>
+
+            <div class="field">
+              <label for="company-name">Empresa</label>
+              <input type="text" id="company-name" placeholder="Nome da empresa" required />
+            </div>
+
+            <div class="field">
+              <label for="company-focus">Área de foco</label>
+              <select id="company-focus" required>
+                <option value="">Selecione</option>
+                <option>Front-end</option>
+                <option>Back-end</option>
+                <option>Full stack</option>
+                <option>Dados</option>
+                <option>Suporte</option>
+                <option>Produto digital</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="company-model">Modelo de trabalho</label>
+              <select id="company-model" required>
+                <option value="">Selecione</option>
+                <option>Remoto</option>
+                <option>Híbrido</option>
+                <option>Presencial</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="company-size">Porte</label>
+              <select id="company-size" required>
+                <option value="">Selecione</option>
+                <option>Startup</option>
+                <option>Pequena empresa</option>
+                <option>Média empresa</option>
+                <option>Grande empresa</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="company-note">Como sua empresa quer ser percebida pelos alunos</label>
+              <textarea
+                id="company-note"
+                rows="4"
+                placeholder="Ex.: Queremos gente curiosa, organizada e com vontade de aprender no ritmo do time."
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Criar conta de recrutador</button>
+              <a href="dashboard-recrutador.html" class="button button-secondary">Abrir área do recrutador</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Conecta <strong>Estágio</strong></span>
+        </a>
+        <p class="footer-note">Cadastro mais enxuto para aluno e mais completo para quem vai contratar.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="vagas.html">Vagas</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="dashboard.html">Perfil</a>
+        <a href="dashboard-recrutador.html">Recrutador</a>
+        <a href="comunidade.html">Comunidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>

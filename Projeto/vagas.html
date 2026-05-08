@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Página de vagas tech da Conecta Estágio com filtros por área para alunos."
+  />
+  <title>Conecta Estágio | Vagas tech</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Conecta <strong>Estágio</strong></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="dashboard.html">Perfil</a>
+        <a href="dashboard-recrutador.html">Recrutador</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="cadastro.html" class="button button-primary nav-cta">Criar conta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Filtro por área tech</span>
+          <h1>Escolha a trilha, corte o ruído e olhe só o que faz sentido para você.</h1>
+          <p>
+            A página de vagas foi pensada para o aluno. Em vez de uma lista solta, você consegue filtrar por área
+            e bater o olho no tipo de vaga, no modelo de trabalho e na stack esperada.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#filtros-vagas" class="button button-primary">Filtrar agora</a>
+            <a href="cadastro.html" class="button button-secondary">Criar cadastro rápido</a>
+          </div>
+        </div>
+
+        <article class="surface-card hero-media-card reveal">
+          <div class="hero-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+              alt="Setup de desenvolvimento com notebook e código"
+            />
+          </div>
+
+          <div class="hero-media-copy">
+            <p class="mini-label">Áreas em destaque</p>
+            <h2>Front-end, back-end, full stack, dados, suporte e produto digital.</h2>
+            <p>Se a ideia é focar em área tech, a navegação também precisa ajudar, e não atrapalhar.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <article class="surface-card job-filter-card reveal" id="filtros-vagas">
+          <div class="panel-title">
+            <span class="eyebrow">Filtrar vagas</span>
+            <h2>Escolha uma área e veja o feed mudar</h2>
+          </div>
+
+          <div class="jobs-filter-bar">
+            <button type="button" class="filter-button active" data-job-filter="todos">Todas</button>
+            <button type="button" class="filter-button" data-job-filter="frontend">Front-end</button>
+            <button type="button" class="filter-button" data-job-filter="backend">Back-end</button>
+            <button type="button" class="filter-button" data-job-filter="fullstack">Full stack</button>
+            <button type="button" class="filter-button" data-job-filter="dados">Dados</button>
+            <button type="button" class="filter-button" data-job-filter="suporte">Suporte</button>
+            <button type="button" class="filter-button" data-job-filter="produto">Produto</button>
+          </div>
+
+          <p class="jobs-count" id="jobs-count">8 vagas encontradas</p>
+        </article>
+
+        <div class="job-list-grid" id="jobs-grid">
+          <article class="surface-card job-card reveal" data-job-area="frontend">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Código front-end na tela" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Estágio Front-end</h3>
+                  <p>Pixel Room</p>
+                </div>
+                <span class="job-chip accent">Remoto</span>
+              </div>
+              <p>Boa para quem está estudando HTML, CSS e JavaScript, e quer ganhar mais repertório de interface.</p>
+              <div class="badge-group">
+                <span class="job-chip">Front-end</span>
+                <span class="job-chip">React</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.pixelroom.com/carreiras/frontend" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="backend">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80" alt="Pessoa programando no notebook" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Estágio Back-end</h3>
+                  <p>Node Harbor</p>
+                </div>
+                <span class="job-chip accent">Hibrido</span>
+              </div>
+              <p>Vaga para quem quer entrar mais em API, banco e organização de regra de negócio.</p>
+              <div class="badge-group">
+                <span class="job-chip">Back-end</span>
+                <span class="job-chip">Node</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.linkedin.com/jobs/" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="fullstack">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1200&q=80" alt="Notebook com tela de desenvolvimento" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Estágio Full stack</h3>
+                  <p>Orbit Campus</p>
+                </div>
+                <span class="job-chip accent">Remoto</span>
+              </div>
+              <p>Ideal para quem curte mexer em tela e também quer se sentir confortável com regra e integração.</p>
+              <div class="badge-group">
+                <span class="job-chip">Full stack</span>
+                <span class="job-chip">JS</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.orbitcampus.com/jobs" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="dados">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Graficos de dados em uma tela" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Estágio em Dados</h3>
+                  <p>Pulse Analytics</p>
+                </div>
+                <span class="job-chip accent">Hibrido</span>
+              </div>
+              <p>Boa porta de entrada para quem gosta de análise, SQL, planilha e organização de informação.</p>
+              <div class="badge-group">
+                <span class="job-chip">Dados</span>
+                <span class="job-chip">SQL</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.linkedin.com/jobs/" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="suporte">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" alt="Pessoa atendendo suporte no computador" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Suporte Web Junior</h3>
+                  <p>Base Digital</p>
+                </div>
+                <span class="job-chip accent">Presencial</span>
+              </div>
+              <p>Entrada boa para quem quer tecnologia com atendimento, sistema interno e base operacional.</p>
+              <div class="badge-group">
+                <span class="job-chip">Suporte</span>
+                <span class="job-chip">Help desk</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.basedigital.com.br/talentos" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="produto">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Time reunido falando sobre produto" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Estágio em Produto Digital</h3>
+                  <p>Loop Studio</p>
+                </div>
+                <span class="job-chip accent">Remoto</span>
+              </div>
+              <p>Boa para quem gosta de pesquisa, organização de backlog e conversa entre design, negócio e dev.</p>
+              <div class="badge-group">
+                <span class="job-chip">Produto</span>
+                <span class="job-chip">UX</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.linkedin.com/jobs/" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="frontend">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Editor de código em tela escura" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Front-end para e-commerce</h3>
+                  <p>Mercado Neon</p>
+                </div>
+                <span class="job-chip accent">Hibrido</span>
+              </div>
+              <p>Projeto focado em componentes, páginas de produto e ajustes de experiência mobile.</p>
+              <div class="badge-group">
+                <span class="job-chip">Front-end</span>
+                <span class="job-chip">Tailwind</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.mercadoneon.com/carreiras" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface-card job-card reveal" data-job-area="dados">
+            <div class="job-thumb">
+              <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1200&q=80" alt="Notebook com tela de análise de dados" />
+            </div>
+            <div class="job-card-body">
+              <div class="job-card-top">
+                <div class="job-card-title">
+                  <h3>Dados para operação</h3>
+                  <p>Axis Cloud</p>
+                </div>
+                <span class="job-chip accent">Remoto</span>
+              </div>
+              <p>Leitura de indicadores, apoio em dashboards e contato com time de negócio e atendimento.</p>
+              <div class="badge-group">
+                <span class="job-chip">Dados</span>
+                <span class="job-chip">Dashboard</span>
+              </div>
+              <div class="job-actions">
+                <a href="https://www.linkedin.com/jobs/" class="button button-secondary" target="_blank" rel="noreferrer">Abrir link</a>
+                <a href="cadastro.html" class="button button-primary">Aplicar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="jobs-empty-state" id="jobs-empty-state">
+          Nenhuma vaga apareceu com esse filtro agora. Tente outra área tech para continuar explorando.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <a href="index.html" class="brand footer-brand">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Conecta <strong>Estágio</strong></span>
+        </a>
+        <p class="footer-note">Página de vagas pensada para cortar ruído e ajudar você a mirar melhor.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="empresas.html">Empresas</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="dashboard.html">Perfil</a>
+        <a href="dashboard-recrutador.html">Recrutador</a>
+        <a href="comunidade.html">Comunidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>
