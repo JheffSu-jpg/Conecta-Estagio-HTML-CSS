@@ -128,17 +128,6 @@ Observacao:
 - O modo demo continua funcionando sem servidor.
 - O modo real usa a Responses API por tras de um servidor local porque a documentacao oficial da OpenAI orienta a nao expor chave em codigo client-side.
 
-## Melhorias futuras
-
-- autenticacao e login
-- persistencia real com backend
-- pagina individual de vaga
-- perfil individual completo de estudante
-- favoritos e historico de vagas
-- busca por palavra-chave
-- pagina individual para cada empresa
-- expansao para outras areas alem de tecnologia
-
 ## Observacao final
 
 Esse projeto foi construido como estudo e portfolio, mas a intencao dele sempre foi parecer algo que poderia existir de verdade. Por isso, o foco nao ficou so no visual: a estrutura das paginas, o tom dos textos e a separacao dos fluxos tambem foram pensados para deixar a experiencia mais crivel.
