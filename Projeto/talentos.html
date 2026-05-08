@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Página de talentos da Conecta Estágio, com filtros reais para recrutadores encontrarem perfis de estudantes."
+  />
+  <title>Conecta Estágio | Talentos</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body class="portal-page">
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <main class="portal-shell">
+    <aside class="portal-sidebar recruiter-sidebar">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Conecta <strong>Estágio</strong></span>
+      </a>
+
+      <p class="sidebar-eyebrow">Talentos</p>
+
+      <nav class="sidebar-nav">
+        <a href="index.html">Início</a>
+        <a href="vagas.html">Vagas</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="dashboard-recrutador.html">Painel do recrutador</a>
+        <a href="talentos.html" class="active">Talentos</a>
+        <a href="comunidade.html">Comunidade</a>
+      </nav>
+
+      <article class="surface-card sidebar-summary">
+        <p class="mini-label">Leitura de perfis</p>
+        <h3>Busca por palavra, área e página individual de cada estudante.</h3>
+        <p>
+          Essa área existe só para o recrutador navegar em perfis, com menos ruído e mais contexto.
+          A jornada pública do aluno continua separada.
+        </p>
+        <div class="progress-track">
+          <span style="width: 82%"></span>
+        </div>
+      </article>
+    </aside>
+
+    <section class="portal-content">
+      <header class="portal-topbar">
+        <div>
+          <p class="mini-label">Filtro real de talentos</p>
+          <h1>Perfis com busca por palavra, área e acesso à página individual completa.</h1>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="dashboard-recrutador.html" class="button button-primary">Voltar ao painel</a>
+          <button type="button" class="button button-secondary" data-logout-button hidden>Sair</button>
+        </div>
+      </header>
+
+      <section class="surface-card spotlight-card reveal">
+        <div class="spotlight-grid">
+          <div class="spotlight-copy">
+            <span class="eyebrow">Talentos com leitura melhor</span>
+            <h2>Agora dá para encontrar perfil por área, curso, habilidade ou parte da apresentação.</h2>
+            <p>
+              O recrutador já não precisa ficar preso em uma tabela estática. A busca passa a olhar curso, headline,
+              bio e habilidades, enquanto a página individual abre contato, objetivo e histórico do estudante.
+            </p>
+          </div>
+
+          <div class="spotlight-image">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+              alt="Pessoa avaliando perfis em um notebook"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="surface-card job-filter-card reveal">
+        <div class="panel-title">
+          <span class="eyebrow">Buscar perfis</span>
+          <h2>Procure por curso, palavra-chave ou área</h2>
+        </div>
+
+        <div class="search-row">
+          <label class="field full" for="students-search">
+            <span>Busca por nome, curso, habilidade ou bio</span>
+            <input
+              type="search"
+              id="students-search"
+              placeholder="Ex.: front-end, pedagogia, SQL, enfermagem, comunicação..."
+            />
+          </label>
+        </div>
+
+        <div class="jobs-filter-bar" id="students-area-filters"></div>
+        <p class="jobs-count" id="students-count">Carregando perfis...</p>
+      </section>
+
+      <div class="talent-card-grid" id="students-grid"></div>
+      <article class="surface-card jobs-empty-state" id="students-empty-state">
+        Nenhum perfil apareceu nesse recorte. Tenta outra palavra ou abre o filtro para uma área diferente.
+      </article>
+    </section>
+  </main>
+
+  <script src="../JS/script.js"></script>
+  <script src="../JS/platform.js"></script>
+</body>
+</html>

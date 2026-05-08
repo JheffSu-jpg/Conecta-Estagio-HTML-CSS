@@ -1892,6 +1892,217 @@ body.is-scrolled .header-row {
   min-height: 220px;
 }
 
+.helper-card,
+.empty-panel,
+.mini-job-item,
+.recruiter-job-item,
+.profile-talent-card {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(180, 197, 236, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.helper-card {
+  display: grid;
+  gap: 12px;
+}
+
+.demo-login-list {
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.demo-login-list strong {
+  color: var(--ink);
+}
+
+.search-row,
+.detail-stack,
+.detail-layout,
+.detail-list-stack,
+.detail-side,
+.detail-side-stack,
+.mini-card-grid,
+.talent-card-grid,
+.recruiter-job-stack,
+.profile-summary-stack,
+.mini-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.mini-card-grid,
+.talent-card-grid,
+.recruiter-job-stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-stack {
+  gap: 24px;
+}
+
+.detail-hero-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+.detail-hero-copy {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.detail-hero-copy h1,
+.profile-summary-hero h3,
+.talent-head h3,
+.job-row-head h3 {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.detail-hero-copy h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+}
+
+.detail-hero-image,
+.detail-hero-image img {
+  border-radius: 22px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.detail-hero-image img {
+  min-height: 320px;
+}
+
+.detail-layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: start;
+}
+
+.detail-section {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.detail-copy {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.detail-list-stack strong,
+.profile-meta-list strong,
+.mini-job-item strong,
+.profile-summary-hero strong,
+.recruiter-job-item strong {
+  color: var(--ink);
+}
+
+.content-list {
+  display: grid;
+  gap: 10px;
+}
+
+.content-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.content-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+}
+
+.profile-meta-list {
+  display: grid;
+  gap: 12px;
+}
+
+.profile-meta-list > div {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(180, 197, 236, 0.1);
+}
+
+.profile-meta-list span,
+.talent-subtitle,
+.talent-copy,
+.job-row-head p,
+.mini-job-item p,
+.empty-panel p {
+  color: var(--muted);
+}
+
+.empty-panel {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.loading-panel {
+  min-height: 180px;
+  align-content: center;
+}
+
+.profile-summary-hero,
+.talent-head,
+.job-row-head,
+.job-row-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.profile-summary-hero,
+.talent-head,
+.job-row-head {
+  flex-wrap: wrap;
+}
+
+.mini-job-item,
+.recruiter-job-item {
+  display: grid;
+  gap: 12px;
+}
+
+.mini-job-item .button,
+.recruiter-job-item .button {
+  width: fit-content;
+}
+
+.profile-talent-card {
+  display: grid;
+  gap: 16px;
+}
+
+.compact-field {
+  min-width: 170px;
+}
+
+.compact-field select {
+  min-height: 46px;
+}
+
+.job-row-actions {
+  flex-wrap: wrap;
+}
+
 .assistant-shell {
   position: fixed;
   right: 20px;
@@ -2488,11 +2699,16 @@ body.is-scrolled .header-row {
   .spotlight-grid,
   .recruiter-chart-grid,
   .job-list-grid,
+  .mini-card-grid,
+  .talent-card-grid,
+  .recruiter-job-stack,
   .photo-grid,
   .hero-note-grid,
   .composer-row,
   .visual-grid,
-  .media-line {
+  .media-line,
+  .detail-layout,
+  .detail-hero-card {
     grid-template-columns: 1fr;
   }
 
@@ -2543,7 +2759,11 @@ body.is-scrolled .header-row {
   .portal-topbar,
   .cta-banner,
   .footer-row,
-  .job-card-meta {
+  .job-card-meta,
+  .profile-summary-hero,
+  .talent-head,
+  .job-row-head,
+  .job-row-actions {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -2620,6 +2840,14 @@ body.is-scrolled .header-row {
     max-height: 74vh;
     padding: 16px;
     border-radius: 24px;
+  }
+
+  .detail-section,
+  .detail-hero-card,
+  .mini-job-item,
+  .profile-talent-card,
+  .recruiter-job-item {
+    padding: 20px;
   }
 
   .recruiter-chart-overview,

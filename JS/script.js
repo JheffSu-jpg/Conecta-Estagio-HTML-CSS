@@ -281,7 +281,7 @@ function showToast(message) {
 }
 
 function setupDemoForms() {
-  const forms = document.querySelectorAll(".js-demo-submit");
+  const forms = document.querySelectorAll(".js-demo-submit:not([data-real-submit])");
 
   forms.forEach((form) => {
     form.addEventListener("submit", (event) => {
@@ -488,6 +488,15 @@ function setupCareerAssistant() {
         "Como deixar o cadastro mais objetivo?"
       ]
     },
+    "login.html": {
+      subtitle: "Ajudo a entender o fluxo de login, sessão e como cada perfil entra no próprio painel.",
+      intro: "Se quiser, eu posso te explicar como o estudante e o recrutador entram, para onde cada um vai e o que mudou com a autenticação real.",
+      prompts: [
+        "Como funciona o login do estudante?",
+        "O que mudou no painel do recrutador?",
+        "Para onde vou depois de entrar?"
+      ]
+    },
     "dashboard-recrutador.html": {
       subtitle: "Dou apoio para escrever vaga, avaliar perfil e melhorar a comunicação com estudantes.",
       intro: "Posso te ajudar a escrever uma vaga melhor, analisar perfis ou pensar em dicas mais honestas para quem está entrando no mercado.",
@@ -498,12 +507,48 @@ function setupCareerAssistant() {
       ]
     },
     "dashboard.html": {
-      subtitle: "Ajudo a ler perfis e identificar pontos fortes de entrada.",
-      intro: "Se quiser, eu posso te ajudar a interpretar melhor os perfis e pensar no que chama mais atenção no início de carreira.",
+      subtitle: "Ajudo a fortalecer o perfil do estudante e a usar melhor favoritos, histórico e recomendações.",
+      intro: "Posso te ajudar a escrever um perfil melhor, pensar em objetivo, organizar habilidades e tirar mais proveito do seu painel.",
       prompts: [
-        "O que mais pesa num perfil iniciante?",
-        "Como identificar clareza de portfólio?",
-        "Quais sinais indicam boa comunicação?"
+        "Como deixar meu perfil mais forte?",
+        "O que vale colocar na bio?",
+        "Como usar melhor meus favoritos?"
+      ]
+    },
+    "talentos.html": {
+      subtitle: "Ajudo o recrutador a buscar melhor por área, habilidade e sinais de aderência nos perfis.",
+      intro: "Se quiser, eu posso te ajudar a filtrar melhor os talentos e a olhar perfil iniciante com mais contexto do que pressa.",
+      prompts: [
+        "Como filtrar talentos com mais critério?",
+        "O que mais importa num perfil iniciante?",
+        "Como ler bio e habilidades sem exagerar?"
+      ]
+    },
+    "perfil-estudante.html": {
+      subtitle: "Ajudo a interpretar o perfil individual do estudante com mais cuidado e mais clareza.",
+      intro: "Posso te ajudar a ler objetivo, bio, habilidades e histórico desse perfil para entender melhor o momento dessa pessoa.",
+      prompts: [
+        "O que esse perfil comunica bem?",
+        "Como melhorar essa apresentação?",
+        "O que chama mais atenção para recrutador?"
+      ]
+    },
+    "vaga.html": {
+      subtitle: "Ajudo a ler a vaga completa, separar o que é essencial e decidir se vale aplicar.",
+      intro: "Se quiser, eu posso te ajudar a interpretar melhor essa vaga, os requisitos, o contexto da empresa e o que realmente pesa aqui.",
+      prompts: [
+        "Essa vaga combina comigo?",
+        "O que é essencial nessa descrição?",
+        "Como decidir se vale aplicar?"
+      ]
+    },
+    "empresa.html": {
+      subtitle: "Ajudo a entender a proposta da empresa e o que esse ambiente parece oferecer para quem está entrando.",
+      intro: "Posso te ajudar a ler essa empresa com mais calma, separar o que é proposta real e o que parece só discurso.",
+      prompts: [
+        "O que essa empresa comunica bem?",
+        "Como saber se esse ambiente combina comigo?",
+        "O que vale observar antes de aplicar?"
       ]
     },
     "comunidade.html": {

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Cadastro da Conecta Estágio com fluxo mais direto para aluno e recrutador, com publicação de vaga dentro da área do recrutador."
+    content="Cadastro da Conecta Estágio com fluxo real para estudante e recrutador, agora com autenticação e persistência local."
   />
-  <title>Conecta Estágio | Cadastro de aluno e recrutador</title>
+  <title>Conecta Estágio | Cadastro</title>
   <link rel="stylesheet" href="../CSS/style.css" />
 </head>
 <body>
@@ -34,6 +34,7 @@
         <a href="dashboard.html">Perfil</a>
         <a href="dashboard-recrutador.html">Recrutador</a>
         <a href="comunidade.html">Comunidade</a>
+        <a href="login.html" class="button button-primary nav-cta" data-auth-cta>Entrar</a>
       </nav>
     </div>
   </header>
@@ -41,34 +42,34 @@
   <main class="section auth-scene">
     <div class="container auth-layout">
       <section class="surface-card auth-visual reveal">
-        <span class="eyebrow">Entradas separadas e bem mais claras</span>
-        <h1>O aluno entra com o essencial. O recrutador assume a área da empresa e publica vaga por lá.</h1>
+        <span class="eyebrow">Conta real, sessão real e perfil que evolui depois</span>
+        <h1>O começo continua leve, mas agora o cadastro já abre uma área real com dados salvos no backend local.</h1>
         <p>
-          A ideia aqui não é cansar quem está chegando. O aluno preenche só o básico para começar,
-          enquanto o recrutador entra por outro fluxo e depois segue para uma área própria com vagas e perfis.
+          Para estudante, a entrada segue direta: nome, email, telefone, curso e senha. Para recrutador,
+          o fluxo já cria a empresa, libera o painel com publicação de vagas e abre o acesso aos perfis.
         </p>
 
         <div class="visual-grid">
           <article class="visual-metric">
-            <strong>Aluno</strong>
-            <span>Nome, email, telefone e curso. Sem excesso logo no primeiro passo.</span>
+            <strong>Estudante</strong>
+            <span>Cria a conta, entra no próprio painel, salva vagas, monta o perfil e acompanha histórico.</span>
           </article>
           <article class="visual-metric">
-            <strong>Área do recrutador</strong>
-            <span>Vagas, links externos e leitura de perfis em uma área separada da jornada do aluno.</span>
+            <strong>Recrutador</strong>
+            <span>Cria a empresa, publica vaga com link externo, acompanha métricas e lê talentos com filtro.</span>
           </article>
         </div>
 
         <ul class="check-list">
-          <li>Cadastro do aluno mais curto e sem pedir informação demais cedo demais.</li>
-          <li>A publicação de vaga acontece dentro da área do recrutador, não no cadastro.</li>
-          <li>O foco da plataforma fica bem definido em áreas de tecnologia.</li>
+          <li>Autenticação local com login e sessão persistida.</li>
+          <li>Perfil do estudante evolui depois, sem travar a entrada.</li>
+          <li>Expansão real para áreas além de tecnologia dentro da base de vagas.</li>
         </ul>
 
         <div class="visual-photo">
           <img
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
-            alt="Universitarios conversando em um campus"
+            alt="Estudantes conversando em um campus universitário"
           />
         </div>
       </section>
@@ -76,7 +77,7 @@
       <section class="surface-card auth-card reveal">
         <div class="auth-tabs" role="tablist" aria-label="Tipos de cadastro">
           <button type="button" class="tab-button active" data-auth-tab="student" aria-selected="true">
-            Cadastro de aluno
+            Cadastro de estudante
           </button>
           <button type="button" class="tab-button" data-auth-tab="recruiter" aria-selected="false">
             Cadastro de recrutador
@@ -84,19 +85,16 @@
         </div>
 
         <div class="tab-caption">
-          <p>Cada aba mostra um fluxo separado para o projeto ficar mais direto e mais crível.</p>
+          <p>O estudante entra rápido. O recrutador já monta a base da empresa e segue para o painel.</p>
         </div>
 
         <div class="auth-panel active" data-auth-panel="student">
           <div class="panel-header">
-            <h2>Cadastro de aluno</h2>
-            <p>Só o básico para você entrar rápido e depois decidir o que vale completar.</p>
+            <h2>Cadastro de estudante</h2>
+            <p>O perfil mais completo fica para depois. Aqui entra só o necessário para começar.</p>
           </div>
 
-          <form
-            class="form-grid js-demo-submit"
-            data-success-message="Conta criada. Agora já dá para entrar nas vagas e filtrar pela área que mais combina com você."
-          >
+          <form id="student-register-form" class="form-grid" data-real-submit="true">
             <div class="field">
               <label for="student-name">Nome</label>
               <input type="text" id="student-name" placeholder="Seu nome" required />
@@ -123,12 +121,21 @@
                 <option>Banco de Dados</option>
                 <option>Redes de Computadores</option>
                 <option>Design Digital</option>
+                <option>Enfermagem</option>
+                <option>Administração</option>
+                <option>Logística</option>
+                <option>Pedagogia</option>
               </select>
             </div>
 
+            <div class="field full">
+              <label for="student-password">Senha</label>
+              <input type="password" id="student-password" minlength="6" placeholder="Mínimo de 6 caracteres" required />
+            </div>
+
             <div class="form-actions">
-              <button type="submit" class="button button-primary">Criar conta de aluno</button>
-              <a href="vagas.html" class="button button-secondary">Ver vagas tech</a>
+              <button type="submit" class="button button-primary">Criar conta de estudante</button>
+              <a href="login.html" class="button button-secondary">Já tenho login</a>
             </div>
           </form>
         </div>
@@ -136,7 +143,7 @@
         <div class="auth-panel" data-auth-panel="recruiter" hidden>
           <div class="panel-header">
             <h2>Cadastro de recrutador</h2>
-            <p>Um fluxo mais direto para quem precisa abrir vaga e acompanhar candidatos.</p>
+            <p>A conta já nasce ligada à empresa e abre um painel com vaga, talentos e métricas.</p>
           </div>
 
           <article class="community-callout recruiter-callout">
@@ -145,15 +152,12 @@
               <span class="role-tag recruiter-tag">Recrutador</span>
             </div>
             <p>
-              Depois do cadastro, você também pode entrar na comunidade para compartilhar ideias, dicas e conselhos
-              sobre portfólio, entrevistas, currículo e como se preparar melhor para conseguir vaga no mundo tech.
+              Depois do cadastro, o recrutador também pode entrar na comunidade para compartilhar ideias,
+              dicas e conselhos sobre portfólio, entrevistas e caminhos mais honestos para chegar ao mercado.
             </p>
           </article>
 
-          <form
-            class="form-grid js-demo-submit"
-            data-success-message="Conta criada. Agora você já pode entrar na área do recrutador, publicar vagas e acessar perfis."
-          >
+          <form id="recruiter-register-form" class="form-grid" data-real-submit="true">
             <div class="field">
               <label for="recruiter-name">Nome do responsável</label>
               <input type="text" id="recruiter-name" placeholder="Seu nome" required />
@@ -165,6 +169,16 @@
             </div>
 
             <div class="field">
+              <label for="recruiter-phone">Telefone</label>
+              <input type="tel" id="recruiter-phone" placeholder="(11) 98888-0000" required />
+            </div>
+
+            <div class="field">
+              <label for="recruiter-password">Senha</label>
+              <input type="password" id="recruiter-password" minlength="6" placeholder="Mínimo de 6 caracteres" required />
+            </div>
+
+            <div class="field">
               <label for="company-name">Empresa</label>
               <input type="text" id="company-name" placeholder="Nome da empresa" required />
             </div>
@@ -173,12 +187,17 @@
               <label for="company-focus">Área de foco</label>
               <select id="company-focus" required>
                 <option value="">Selecione</option>
-                <option>Front-end</option>
-                <option>Back-end</option>
-                <option>Full stack</option>
-                <option>Dados</option>
-                <option>Suporte</option>
-                <option>Produto digital</option>
+                <option value="frontend">Front-end</option>
+                <option value="backend">Back-end</option>
+                <option value="fullstack">Full stack</option>
+                <option value="dados">Dados</option>
+                <option value="suporte">Suporte</option>
+                <option value="produto">Produto digital</option>
+                <option value="design">Design</option>
+                <option value="enfermagem">Enfermagem</option>
+                <option value="administracao">Administração</option>
+                <option value="logistica">Logística</option>
+                <option value="pedagogia">Pedagogia</option>
               </select>
             </div>
 
@@ -204,7 +223,7 @@
             </div>
 
             <div class="field full">
-              <label for="company-note">Como sua empresa quer ser percebida pelos alunos</label>
+              <label for="company-note">Como sua empresa quer ser percebida pelos estudantes</label>
               <textarea
                 id="company-note"
                 rows="4"
@@ -214,7 +233,7 @@
 
             <div class="form-actions">
               <button type="submit" class="button button-primary">Criar conta de recrutador</button>
-              <a href="dashboard-recrutador.html" class="button button-secondary">Abrir área do recrutador</a>
+              <a href="login.html" class="button button-secondary">Já tenho login</a>
             </div>
           </form>
         </div>
@@ -229,12 +248,13 @@
           <span class="brand-mark">C</span>
           <span class="brand-text">Conecta <strong>Estágio</strong></span>
         </a>
-        <p class="footer-note">Cadastro mais enxuto para aluno e mais completo para quem vai contratar.</p>
+        <p class="footer-note">Cadastro direto no começo. Perfil mais forte, favorito e histórico no passo seguinte.</p>
       </div>
 
       <div class="footer-links">
         <a href="vagas.html">Vagas</a>
         <a href="empresas.html">Empresas</a>
+        <a href="login.html">Entrar</a>
         <a href="dashboard.html">Perfil</a>
         <a href="dashboard-recrutador.html">Recrutador</a>
         <a href="comunidade.html">Comunidade</a>
@@ -243,5 +263,6 @@
   </footer>
 
   <script src="../JS/script.js"></script>
+  <script src="../JS/platform.js"></script>
 </body>
 </html>

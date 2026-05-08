@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Página de perfis dos estudantes na Conecta Estágio, feita para recrutadores visualizarem cursos, áreas e pontos fortes."
+    content="Área do estudante na Conecta Estágio, com perfil completo, favoritos, histórico e vagas recomendadas."
   />
-  <title>Conecta Estágio | Perfis dos estudantes</title>
+  <title>Conecta Estágio | Perfil do estudante</title>
   <link rel="stylesheet" href="../CSS/style.css" />
 </head>
 <body class="portal-page">
@@ -20,24 +20,26 @@
         <span class="brand-text">Conecta <strong>Estágio</strong></span>
       </a>
 
-      <p class="sidebar-eyebrow">Perfis dos estudantes</p>
+      <p class="sidebar-eyebrow">Área do estudante</p>
 
       <nav class="sidebar-nav">
         <a href="index.html">Início</a>
-        <a href="vagas.html">Vagas tech</a>
+        <a href="vagas.html">Vagas</a>
         <a href="empresas.html">Empresas</a>
-        <a href="cadastro.html">Cadastro</a>
-        <a href="dashboard-recrutador.html">Área do recrutador</a>
-        <a href="dashboard.html" class="active">Perfis dos estudantes</a>
+        <a href="dashboard.html" class="active">Meu perfil</a>
         <a href="comunidade.html">Comunidade</a>
+        <a href="dashboard-recrutador.html">Recrutador</a>
       </nav>
 
       <article class="surface-card sidebar-summary">
-        <p class="mini-label">Leitura de talentos</p>
-        <h3>Perfis mais objetivos ficam mais fáceis de comparar</h3>
-        <p>Aqui entram os nomes com curso, área e pontos fortes visíveis para o recrutador bater o olho rápido.</p>
+        <p class="mini-label">Seu espaço</p>
+        <h3>Favoritos, histórico e edição real do perfil em uma área só.</h3>
+        <p>
+          Aqui você entra para completar sua apresentação, rever vagas salvas, acompanhar o que já visitou
+          e organizar melhor a leitura do seu próprio começo.
+        </p>
         <div class="progress-track">
-          <span style="width: 79%"></span>
+          <span style="width: 86%"></span>
         </div>
       </article>
     </aside>
@@ -45,173 +47,141 @@
     <section class="portal-content">
       <header class="portal-topbar">
         <div>
-          <p class="mini-label">Base filtrada por tecnologia e início de carreira</p>
-          <h1>Uma página separada só para leitura de perfis, sem misturar com a jornada pública do estudante.</h1>
+          <p class="mini-label">Perfil conectado ao backend local</p>
+          <h1><span id="student-dashboard-name">Seu perfil</span> agora tem área própria, dados persistidos e leitura real das vagas.</h1>
         </div>
 
         <div class="topbar-actions">
-          <a href="dashboard-recrutador.html" class="button button-primary">Voltar para recrutador</a>
-          <a href="comunidade.html" class="button button-secondary">Ler comunidade</a>
+          <a href="vagas.html" class="button button-primary">Explorar vagas</a>
+          <button type="button" class="button button-secondary" data-logout-button hidden>Sair</button>
         </div>
       </header>
 
       <section class="surface-card spotlight-card reveal">
         <div class="spotlight-grid">
           <div class="spotlight-copy">
-            <span class="eyebrow">Leitura da semana</span>
-            <h2>Os perfis mais fortes aparecem quando curso, área e portfólio ficam claros logo no primeiro bloco.</h2>
+            <span class="eyebrow">Fluxo do estudante</span>
+            <h2>Entrar, salvar vaga, rever histórico e completar o perfil ficou tudo no mesmo caminho.</h2>
             <p>
-              Essa página existe para o recrutador navegar só nos estudantes, com menos ruído e mais contexto.
-              Comunidade e vagas continuam públicas; perfis ficam concentrados aqui para triagem e contato.
+              O cadastro continua leve na entrada, mas agora você pode aprofundar o perfil sem perder o que já fez.
+              É daqui que saem a bio, a área preferida, as habilidades, os links e a leitura das vagas que mais chamaram atenção.
             </p>
 
             <div class="spotlight-pills">
-              <span class="pill">17 perfis ativos</span>
-              <span class="pill pill-soft">9 com portfólio público</span>
-              <span class="pill">6 com boa troca na comunidade</span>
+              <span class="pill">Perfil editável</span>
+              <span class="pill pill-soft">Favoritos reais</span>
+              <span class="pill">Histórico salvo</span>
             </div>
           </div>
 
           <div class="spotlight-image">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-               alt="Recrutador analisando perfis em um notebook"
-             />
-           </div>
-         </div>
-       </section>
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+              alt="Estudantes estudando e conversando em um espaço compartilhado"
+            />
+          </div>
+        </div>
+      </section>
 
-       <section class="metric-grid">
-         <article class="surface-card metric-card reveal">
-           <span class="metric-label">Perfis ativos</span>
-           <strong class="metric-value">17</strong>
-           <span class="metric-delta">alunos com nome, contato, curso e área mais visíveis</span>
-         </article>
-         <article class="surface-card metric-card reveal">
-           <span class="metric-label">Front-end</span>
-           <strong class="metric-value">08</strong>
-           <span class="metric-delta">trilha com mais portfólio publicado e melhor aderência visual</span>
-         </article>
-         <article class="surface-card metric-card reveal">
-           <span class="metric-label">Dados e suporte</span>
-           <strong class="metric-value">05</strong>
-           <span class="metric-delta">grupo com boa base técnica e abertura para onboarding guiado</span>
-         </article>
-         <article class="surface-card metric-card reveal">
-           <span class="metric-label">Com contato pronto</span>
-           <strong class="metric-value">12</strong>
-           <span class="metric-delta">email e telefone organizados para avançar rápido</span>
-         </article>
-       </section>
+      <section class="metric-grid" id="student-dashboard-metrics"></section>
 
-       <section class="insight-grid">
-          <article class="surface-card portal-card reveal">
-           <div class="panel-title">
-             <span class="eyebrow">Perfis em destaque</span>
-             <h2>Quem chama mais atencao agora</h2>
-           </div>
+      <section class="dual-grid">
+        <article class="surface-card portal-card reveal" id="student-profile-summary"></article>
 
-           <div class="task-list">
-             <div class="task-item">
-               <strong>Larissa M. | ADS | Front-end</strong>
-               <p>Portfólio mais enxuto, boa leitura visual e uma apresentação que não enrola no que foi feito.</p>
-             </div>
-             <div class="task-item">
-               <strong>Rafael S. | SI | Produto digital</strong>
-               <p>Explica bem o raciocínio, se comunica melhor em entrevista e mostra mais maturidade de processo.</p>
-             </div>
-             <div class="task-item">
-               <strong>Camila T. | Design Digital | UI</strong>
-               <p>Tem projeto bem apresentado e boa ponte entre design, interface e implementação.</p>
-             </div>
-           </div>
-         </article>
+        <article class="surface-card portal-card reveal">
+          <div class="panel-title">
+            <span class="eyebrow">Editar perfil</span>
+            <h2>Deixe sua apresentação mais forte com calma</h2>
+          </div>
 
-          <article class="surface-card portal-card reveal">
-           <div class="panel-title">
-             <span class="eyebrow">Mapa de habilidades</span>
-             <h2>Onde os estudantes estão chegando mais fortes</h2>
-           </div>
-
-           <div class="skill-list">
-             <div class="skill-item">
-               <div class="skill-head">
-                 <strong>HTML e estrutura</strong>
-                 <span>88%</span>
-               </div>
-               <div class="skill-bar"><span style="width: 88%"></span></div>
-             </div>
-            <div class="skill-item">
-              <div class="skill-head">
-                <strong>CSS responsivo</strong>
-                <span>84%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 84%"></span></div>
+          <form id="student-profile-form" class="form-grid" data-real-submit="true">
+            <div class="field full">
+              <label for="student-profile-headline">Título do perfil</label>
+              <input type="text" id="student-profile-headline" placeholder="Ex.: Estudante de ADS focada em front-end e interface" />
             </div>
-            <div class="skill-item">
-              <div class="skill-head">
-                <strong>JavaScript no DOM</strong>
-                <span>72%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 72%"></span></div>
+
+            <div class="field">
+              <label for="student-profile-area">Área de interesse</label>
+              <select id="student-profile-area"></select>
             </div>
-            <div class="skill-item">
-               <div class="skill-head">
-                 <strong>Apresentação de projeto</strong>
-                 <span>66%</span>
-               </div>
-               <div class="skill-bar"><span style="width: 66%"></span></div>
-             </div>
-           </div>
-         </article>
-       </section>
 
-       <section class="surface-card table-panel reveal">
-         <div class="panel-title">
-           <span class="eyebrow">Base resumida</span>
-           <h2>Contato, área e presença de cada perfil</h2>
-         </div>
+            <div class="field">
+              <label for="student-profile-city">Cidade</label>
+              <input type="text" id="student-profile-city" placeholder="Ex.: São Paulo, SP" />
+            </div>
 
-         <div class="table-wrap">
-           <table class="custom-table">
-             <thead>
-               <tr>
-                 <th>Nome</th>
-                 <th>Contato</th>
-                 <th>Curso</th>
-                 <th>Area</th>
-                 <th>Destaque</th>
-               </tr>
-             </thead>
-             <tbody>
-               <tr>
-                 <td>Larissa M.</td>
-                 <td>larissa@email.com</td>
-                 <td>ADS</td>
-                 <td>Front-end</td>
-                 <td><span class="pill pill-status cool">Portfólio público</span></td>
-               </tr>
-               <tr>
-                 <td>Rafael S.</td>
-                 <td>rafael@email.com</td>
-                 <td>Sistemas de Informação</td>
-                 <td>Produto digital</td>
-                 <td><span class="pill pill-status warm">Boa comunicação</span></td>
-               </tr>
-               <tr>
-                 <td>Camila T.</td>
-                 <td>camila@email.com</td>
-                 <td>Design Digital</td>
-                 <td>UI</td>
-                 <td><span class="pill pill-status neutral">Projeto bem apresentado</span></td>
-               </tr>
-             </tbody>
-           </table>
-         </div>
+            <div class="field">
+              <label for="student-profile-availability">Disponibilidade</label>
+              <input type="text" id="student-profile-availability" placeholder="Ex.: Noite e remoto" />
+            </div>
+
+            <div class="field">
+              <label for="student-profile-goal">Objetivo</label>
+              <input type="text" id="student-profile-goal" placeholder="Ex.: Quero minha primeira vaga em dados" />
+            </div>
+
+            <div class="field">
+              <label for="student-profile-portfolio">Portfólio ou GitHub</label>
+              <input type="url" id="student-profile-portfolio" placeholder="https://github.com/seuusuario" />
+            </div>
+
+            <div class="field">
+              <label for="student-profile-linkedin">LinkedIn</label>
+              <input type="url" id="student-profile-linkedin" placeholder="https://linkedin.com/in/seuperfil" />
+            </div>
+
+            <div class="field">
+              <label for="student-profile-skills">Habilidades</label>
+              <input type="text" id="student-profile-skills" placeholder="Ex.: HTML, CSS, React, SQL" />
+            </div>
+
+            <div class="field full">
+              <label for="student-profile-bio">Bio</label>
+              <textarea
+                id="student-profile-bio"
+                rows="5"
+                placeholder="Conte em poucas linhas o que você gosta de estudar, que tipo de projeto faz sentido para você e como quer crescer."
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="button button-primary">Salvar perfil</button>
+              <a href="perfil-estudante.html" class="button button-secondary">Ver página individual</a>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <section class="insight-grid">
+        <article class="surface-card portal-card reveal">
+          <div class="panel-title">
+            <span class="eyebrow">Favoritos</span>
+            <h2>Vagas que você salvou para comparar depois</h2>
+          </div>
+          <div class="mini-card-grid" id="student-favorites-grid"></div>
+        </article>
+
+        <article class="surface-card portal-card reveal">
+          <div class="panel-title">
+            <span class="eyebrow">Histórico</span>
+            <h2>Últimas vagas abertas por você</h2>
+          </div>
+          <div class="task-list" id="student-history-list"></div>
+        </article>
+      </section>
+
+      <section class="surface-card table-panel reveal">
+        <div class="panel-title">
+          <span class="eyebrow">Sugestões da sua área</span>
+          <h2>Recomendadas para o momento do seu perfil</h2>
+        </div>
+
+        <div class="job-list-grid" id="student-recommended-grid"></div>
       </section>
     </section>
   </main>
 
   <script src="../JS/script.js"></script>
+  <script src="../JS/platform.js"></script>
 </body>
 </html>
