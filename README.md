@@ -1,37 +1,43 @@
 # Conecta Estagio
 
-Conecta Estagio e um projeto front-end conceitual pensado como portfolio para nivel estagio. A proposta foi sair do formato de landing page solta e montar algo com mais cara de produto real, organizando vagas, cadastro, area do recrutador, perfis de estudantes, comunidade e apresentacao de empresas em uma experiencia unica. Agora ele tambem tem uma camada opcional de IA real via servidor local, sem expor chave no navegador.
+Conecta Estagio e um projeto de portfolio pensado para parecer menos uma landing page isolada e mais um produto pequeno, com fluxo de estudante, fluxo de recrutador, vagas, empresas, comunidade, autenticacao e persistencia local.
 
 ## Contexto da ideia
 
-Me chamo Jeferson e estou no segundo periodo de ADS. A ideia do projeto nasceu de uma dor muito proxima do meu momento: perceber como estudantes que estao tentando conseguir a primeira oportunidade quase sempre encontram uma jornada confusa, fria e espalhada entre varios lugares.
+Me chamo Jeferson e estou no segundo periodo de ADS. A ideia do projeto nasceu de uma dor muito proxima do meu momento: perceber como estudantes que estao tentando conseguir a primeira oportunidade quase sempre encontram uma jornada fria, confusa e espalhada entre varios lugares.
 
-Em muitos casos, a pessoa encontra:
+Eu queria imaginar uma plataforma em que:
 
-- vaga sem contexto
-- empresa sem apresentacao
-- formulario cansativo
-- pouca troca real sobre processo seletivo
-- quase nenhuma ponte entre estudante e recrutador
-
-Por isso, a proposta do Conecta Estagio foi imaginar uma plataforma que deixasse esse comeco mais claro, mais humano e mais proximo da vida real.
+- a vaga tivesse mais contexto
+- a empresa se apresentasse melhor
+- o cadastro nao cansasse logo na entrada
+- o recrutador tivesse uma area propria
+- a troca entre os dois lados acontecesse num espaco mais humano
 
 ## O que o projeto entrega hoje
 
-Na versao atual, a plataforma se organiza assim:
+Na versao atual, o projeto ja tem:
 
-- home com proposta do produto e narrativa mais autoral
-- pagina de vagas com filtros por area tech
-- cadastro separado para aluno e recrutador
-- area do recrutador para publicar vagas com link externo
-- pagina separada de perfis dos estudantes
-- comunidade com interacao entre alunos e recrutadores
-- pagina de empresas com apresentacao mais humana
-- assistente Conecta IA com avatar proprio, modo demo no front e modo real opcional via servidor local
+- home com narrativa pessoal e proposta da plataforma
+- autenticacao e login para estudante e recrutador
+- persistencia real em backend local com banco JSON
+- pagina de vagas com busca por palavra-chave e filtro por area
+- pagina individual para cada vaga
+- favoritos e historico reais para o estudante
+- area do estudante com perfil editavel e recomendacoes
+- pagina individual completa para cada estudante
+- area do recrutador com publicacao real de vagas
+- grafico do ciclo com vagas acessadas, preenchidas e pendentes
+- pagina de talentos separada para recrutadores
+- pagina de empresas com busca, filtros e pagina individual para cada empresa
+- comunidade com participacao de estudantes e recrutadores
+- assistente Conecta IA com modo demo no front e modo real opcional via servidor local
 
-## Foco atual
+## Areas trabalhadas
 
-Hoje, o projeto esta concentrado em inicio de carreira na area de tecnologia, com foco em:
+O projeto nasceu com foco em tecnologia, mas agora a base local ja contempla outras trilhas tambem.
+
+Areas atuais:
 
 - Front-end
 - Back-end
@@ -39,95 +45,107 @@ Hoje, o projeto esta concentrado em inicio de carreira na area de tecnologia, co
 - Dados
 - Suporte
 - Produto digital
-
-Esse recorte foi intencional para manter coerencia com o meu contexto atual em ADS e com o tipo de publico que eu queria representar.
-
-## Expansao futura da ideia
-
-A proposta nao precisa ficar presa so ao universo tech. Se o conceito evoluir, a ideia e abrir espaco tambem para outras areas, como:
-
+- Design
 - Enfermagem
 - Administracao
 - Logistica
 - Pedagogia
-- Recursos Humanos
-- Design
-
-O mais importante seria manter a mesma intencao da plataforma: aproximar estudante, empresa e recrutador de um jeito menos travado e mais honesto.
 
 ## Diferenciais do projeto
 
-- fluxo mais realista do que uma landing page isolada
-- linguagem jovem e mais proxima do universo universitario
-- visual escuro com identidade mais forte
-- filtros e interacoes em JavaScript puro
-- separacao clara entre jornada publica do estudante e operacao do recrutador
-- comunidade como unico espaco de troca entre os dois lados
-- marca visual propria, com logo aplicado em todas as paginas
-- camada de IA progressiva: funciona no front sem backend e pode subir para modo real com OpenAI
+- fluxo mais realista do que uma landing page comum
+- separacao clara entre jornada publica, estudante e recrutador
+- linguagem mais jovem e mais proxima da realidade universitaria
+- visual escuro com identidade propria
+- varias paginas conectadas com comportamento real
+- favoritos, historico e perfis com persistencia local
+- assistente integrada ao proprio produto
 
-## Estrutura das telas
+## Estrutura principal
 
 - `Projeto/index.html`
-  home principal e apresentacao do conceito
-- `Projeto/vagas.html`
-  feed de vagas com filtros por area
+  home principal
+- `Projeto/login.html`
+  login de estudante e recrutador
 - `Projeto/cadastro.html`
-  cadastro de aluno e de recrutador
-- `Projeto/dashboard-recrutador.html`
-  area do recrutador com publicacao de vaga
-- `Projeto/dashboard.html`
-  pagina de perfis dos estudantes
-- `Projeto/comunidade.html`
-  comunidade com alunos e recrutadores
+  cadastro real com senha
+- `Projeto/vagas.html`
+  listagem dinamica de vagas
+- `Projeto/vaga.html`
+  pagina individual da vaga
 - `Projeto/empresas.html`
-  apresentacao das empresas
+  listagem dinamica de empresas
+- `Projeto/empresa.html`
+  pagina individual da empresa
+- `Projeto/dashboard.html`
+  area do estudante
+- `Projeto/perfil-estudante.html`
+  perfil individual completo do estudante
+- `Projeto/dashboard-recrutador.html`
+  area do recrutador
+- `Projeto/talentos.html`
+  busca de perfis para recrutadores
+- `Projeto/comunidade.html`
+  comunidade
 - `CSS/style.css`
-  identidade visual, responsividade e refinamento de interface
+  identidade visual e responsividade
 - `JS/script.js`
-  interacoes do projeto e assistente Conecta IA
-- `assets/conecta-logo.png`
-  logo do site com fundo transparente
+  interacoes visuais e Conecta IA
+- `JS/platform.js`
+  autenticacao, sessao, API e renderizacao dinamica
 - `server.js`
-  servidor local opcional para servir o projeto e ligar a Conecta IA em modo real
+  servidor local, API e persistencia
+- `data/db.json`
+  banco local gerado automaticamente
 
 ## Tecnologias utilizadas
 
 - HTML5
 - CSS3
 - JavaScript puro
-- Node.js para o servidor local da IA
-- OpenAI Responses API no modo real da assistente
+- Node.js
+- banco JSON local
+- OpenAI Responses API para o modo real da assistente
 - imagens externas via Unsplash
 
-## O que esse projeto demonstra no portfolio
+## Como rodar
 
-Como case de portfolio, esse projeto mostra:
+1. Abra a pasta do projeto.
+2. No terminal, rode:
+   `node server.js`
+3. Abra:
+   `http://localhost:3000`
 
-- organizacao de varias paginas conectadas
-- cuidado com hierarquia visual e consistencia de interface
-- pensamento de produto, e nao so de tela isolada
-- preocupacao com copy, navegacao e experiencia
-- capacidade de iterar, corrigir e refinar um projeto ao longo do tempo
+## Contas de demonstracao
 
-## Como abrir o projeto
+- estudante
+  `larissa@conecta.dev`
+  senha: `123456`
 
-1. Abra a pasta do projeto no editor.
-2. Para navegar no modo normal, abra `Projeto/index.html` no navegador ou use um servidor local simples.
-3. Para ligar a IA real, rode `server.js` e abra `http://localhost:3000`.
+- recrutador
+  `rh@orbitlabs.com`
+  senha: `123456`
 
 ## Como ativar a Conecta IA em modo real
 
-1. Gere sua chave na plataforma da OpenAI.
+1. Gere sua chave na OpenAI.
 2. No PowerShell, rode:
    `$env:OPENAI_API_KEY="sua-chave"; node server.js`
 3. Abra `http://localhost:3000`.
-4. Clique na assistente e use `Atualizar status`.
 
-Observacao:
-- O modo demo continua funcionando sem servidor.
-- O modo real usa a Responses API por tras de um servidor local porque a documentacao oficial da OpenAI orienta a nao expor chave em codigo client-side.
+Sem chave, a assistente continua em modo demo dentro do proprio site.
+
+## O que esse projeto demonstra no portfolio
+
+Como case de portfolio, ele mostra:
+
+- organizacao de varias paginas conectadas
+- construcao de fluxo real de produto
+- consumo de API e persistencia local
+- cuidado com copy, UX e hierarquia visual
+- separacao de papeis e regras de acesso
+- capacidade de evoluir um projeto alem do visual
 
 ## Observacao final
 
-Esse projeto foi construido como estudo e portfolio, mas a intencao dele sempre foi parecer algo que poderia existir de verdade. Por isso, o foco nao ficou so no visual: a estrutura das paginas, o tom dos textos e a separacao dos fluxos tambem foram pensados para deixar a experiencia mais crivel.
+Esse projeto continua sendo um estudo, mas a intencao dele foi sair do nivel de vitrine e chegar mais perto de um produto pequeno, com fluxo, estado, login, dados salvos e paginas que conversam entre si.

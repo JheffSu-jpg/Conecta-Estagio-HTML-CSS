@@ -727,7 +727,9 @@ const conectaPlatform = (() => {
               ${
                 state.user && state.user.role === "student"
                   ? `<button type="button" class="button button-secondary" data-favorite-job="${escapeHtml(job.id)}">${state.favoriteIds.has(job.id) ? "Remover favorito" : "Salvar vaga"}</button>`
-                  : `<a href="login.html" class="button button-secondary">Entrar para salvar</a>`
+                  : !state.user
+                    ? `<a href="login.html" class="button button-secondary">Entrar para salvar</a>`
+                    : ""
               }
               ${company ? `<a href="${escapeHtml(company.detailUrl)}" class="button button-secondary">Ver empresa</a>` : ""}
             </div>
